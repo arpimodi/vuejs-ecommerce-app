@@ -13,3 +13,5 @@
 #top-navigation .cart-info {
     width: 100%;
 }
+
+#top-navigation .cart-info .stats { margin-right: 5px; }
