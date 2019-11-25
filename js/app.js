@@ -65,3 +65,13 @@ new Vue({
         
             product.inStock--;
         },
+        getCartItem: function(product) {
+            for (var i = 0; i < this.cart.items.length; i++) {
+                if (this.cart.items[i].product.id === product.id) {
+                    return this.cart.items[i];
+                }
+            }
+        
+            return null;
+        },
+        
