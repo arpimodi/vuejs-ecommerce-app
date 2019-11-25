@@ -74,4 +74,15 @@ new Vue({
         
             return null;
         },
+        increaseQuantity: function(cartItem) {
+            cartItem.product.inStock--;
+            cartItem.quantity++;
+        },
+        decreaseQuantity: function(cartItem) {
+            cartItem.quantity--;
+            cartItem.product.inStock++;
         
+            if (cartItem.quantity == 0) {
+                this.removeItemFromCart(cartItem);
+            }
+        },
